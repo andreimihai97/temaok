@@ -1,0 +1,13 @@
+
+%Semnal dreptunghiular
+%A+=0.5, A-=-1
+t=0:0.002:2;  %0.002 = 2ms
+%Analog pentru rezolutia temporala de 20ms sau 200ms se inlocuieste cu
+%t=0:0.02:2, respectiv 0:0.2:2 .
+%factor de umplere 25% si perioada T=2s.
+w=2*pi;
+u=0.75*square(w*t, 25) - 0.25;
+plot(t,u,'g')
+title('Semnal Dreptunghiular')
+xlabel('Timp (s)')
+ylabel('Amplitudine (V)')

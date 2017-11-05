@@ -1,0 +1,13 @@
+%Sinusoidal redresat mono-alternanta
+%A=0.8
+t = 0:0.002:4; %0.002 = 2ms = rezolutia temporala
+    %Analog pentru rezolutia temporala de 20ms sau 200ms se inlocuieste cu
+%t=0:0.02:2, respectiv 0:0.2:2 .
+%Perioada T=3s.
+w=2*pi*1/3;
+u=0.8*sin(w*t); 
+u(u<0) = 0;  %Monoredresare
+plot(t, u, 'p');
+title('Sinus redresat mono-alternanta')
+xlabel('Timp [s]')
+ylabel('Amplitudine [V]')

@@ -1,0 +1,12 @@
+%Sinusoidal redresat dubla-alternanta
+%A=1.5
+t = 0:0.002:8; %0.002 = 2ms
+   %Analog pentru rezolutia temporala de 20ms sau 200ms se inlocuieste cu
+%t=0:0.02:2, respectiv 0:0.2:2 .
+%Perioada T=2s.
+w=w*pi*1/4;
+u=1.5*abs( sin(w*t) ); %redresare
+plot(t, u, 'k' );	
+title('Sinus redresat dubla-alternanta')
+xlabel('Timp [s]')
+ylabel('Amplitudine [V]')

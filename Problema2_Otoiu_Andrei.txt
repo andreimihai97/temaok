@@ -1,0 +1,13 @@
+%Semnal triunghiular
+%A+ = 1, A- = -2.
+t=0:0.002:20;  %rezolutia temporala de 2ms
+    %Analog pentru rezolutia temporala de 20ms sau 200ms se inlocuieste cu
+%t=0:0.02:2, respectiv 0:0.2:2 .
+%Panta de 1 V/2 si perioada T=5s.
+w=2*1/6*pi;
+u=1.5*sawtooth(w*t, 0.5) - 0.5;
+plot(t,u,'b')
+title('Semnal Triunghiular')
+xlabel('Timp [s]')
+ylabel('Amplitudine [V]')
+
